@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Куртки
+{% endblock %}
+
+{% block content %}
+<!--suppress ALL -->
+<h2 class="main_item">Куртки</h2>
+<div class="card_item">
+    {% for jacket in jacket_list %}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src={{jacket.photo}} alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{jacket.name}}</h5>
+            <p class="card-text">Цена: {{jacket.cost}} руб.</p>
+            <a href="#" class="btn btn-primary">Купить</a>
+        </div>
+    </div>
+
+    {%endfor%}
+</div>
+{% endblock %}

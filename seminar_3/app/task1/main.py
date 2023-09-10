@@ -1,13 +1,18 @@
-import os
+# import os
 import random
 
 from flask import Flask, render_template
-from task1.models import db, Student, Faculty
+from models import db, Student, Faculty
 
 app = Flask(__name__)
-app.secret_key =b'5f214cacbd30c2ae4784b520f17912ae0d5d8c16ae98128e3f549546221265e4'
+"""
+Простейший способ генерации такого ключа, выполнить следующие пару строк кода
+    >>> import secrets
+    >>> secrets.token_hex()
+"""
+app.secret_key = b'5f214cacbd30c2ae4784b520f17912ae0d5d8c16ae98128e3f549546221265e4'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///mydatabase.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///my_database.db'
 db.init_app(app)
 
 
@@ -45,7 +50,7 @@ def add_test_data():
 def all_students():
     students = Student.query.all()
     context = {'students': students}
-    return render_template('books.html', **context)
+    return render_template('students.html', **context)
 
 
 if __name__ == "__main__":

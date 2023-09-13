@@ -7,12 +7,22 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="PyNamespacePackagesService">
+    <option name="namespacePackageFolders">
+      <list>
+        <option value="$MODULE_DIR$/homework_3" />
+      </list>
+    </option>
+  </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/seminar_1/templates" />
-        <option value="$MODULE_DIR$/Task_9/templates" />
         <option value="$MODULE_DIR$/homework_2/templates" />
+        <option value="$MODULE_DIR$/homework_3/templates" />
+        <option value="$MODULE_DIR$/homework_1/templates" />
+        <option value="$MODULE_DIR$/seminar_3/app/task1/templates" />
+        <option value="$MODULE_DIR$/seminar_5/templates" />
       </list>
     </option>
   </component>
